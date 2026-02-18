@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Sensor Unblocker",
+  "version": "1.0",
+  "description": "Удаляет скрывающий оверлей",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://discord-sensor.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
